@@ -20,16 +20,33 @@ function showPost(post) {
 
 window.addEventListener("DOMContentLoaded", getData);
 
+//const urlParams = new URLSearchParams(window.location.search);
+//const search = urlParams.get("search");
+function getData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get("search");
+    const id = urlParams.get("id");
+    if (search) {
+        console.log("this is a search result")
+    } else {
+        console.log("not searching")
+    }
+
+}
+
+
 function getSearchData() {
     const urlParams = new URLSearchParams(window.location.search);
     const search = urlParams.get("search");
+    const id = urlParams.get("id");
     //console.log("getData")
+
     fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/films?_embed&search=" + search)
         .then(res => res.json())
         .then(useData)
 }
 
-function getData() {
+function getFrontpageData() {
     //console.log("getData")
     fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/films")
         .then(res => res.json())
