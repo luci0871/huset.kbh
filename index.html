@@ -9,18 +9,37 @@
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2 class="sidepic">
+                <img class="imgside" src="pics/sideways-logo.png">
+            </h2>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
+                <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
+                <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
+                <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+                <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+            </ul>
+        </div>
+    </div>
+
     <h1>Films</h1>
     <form action="search.html">
         <input name="search" type="search">
         <input type="submit" value="search">
     </form>
     <section id="event"> </section>
+
     <template class="filmTemplate">
         <article>
             <header>
                 <a href="sub.html?id=51">
-                    <h1>Event title</h1>
+                <h1 class="test">Event title</h1>
                 </a>
+                <a href="search.html"></a>
                 <p class="prices">Price</p>
 
                 <img src="" alt="" class="cover">
@@ -28,6 +47,7 @@
             <p>body of event</p>
         </article>
     </template>
+
     <script src="main.js">
     </script>
 </body>
