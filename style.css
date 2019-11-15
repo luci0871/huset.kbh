@@ -106,9 +106,35 @@ body {
 
 /*side logo*/
 .imgside {
-    resize: 50px;
+    width: 170px;
+    height: 50px;
 }
 
-template {
-    margin-left: 100px;
+.logoside {
+    height: 100%;
+    padding: 0px 30px;
+    position: fixed;
+    margin-left: 1250px;
+}
+
+article {
+    margin-top: 25px;
+    box-sizing: border-box;
+
+}
+
+form {
+    margin-left: 200px;
+}
+
+#event {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    max-width: 1300px;
+    grid-template-rows: 2fr;
+    margin: o auto;
+    border-radius: 25%;
+    padding: 2rem;
+    margin-left: 200px;
 }
