@@ -1,18 +1,19 @@
 window.addEventListener("DOMContentLoaded", getData);
 
-//const urlParams = new URLSearchParams(window.location.search);
-//const search = urlParams.get("search");
-
 function getData() {
     const urlParams = new URLSearchParams(window.location.search);
     const search = urlParams.get("search");
     const id = urlParams.get("id");
+    const category = urlParams.get("category");
 
     if (search) {
         //console.log("this is a search result")
         getSearchData();
     } else if (id) {
         getSingleEvent();
+    } else if (category) {
+        console.log("show category:", category)
+        getCategoryData(category)
     } else {
         //console.log("not searching")
         getFrontpageData();
@@ -78,15 +79,14 @@ function getFrontpageData() {
         .then(useData)
 }
 
+function getCategoryData(catId) {
+    console.log(catId)
+    fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/films?_embed&categories=" + catId)
+        .then(res => res.json())
+        .then(useData)
 
-
-/*function showEvent(event) {
-    console.log(event)
-    document.querySelector("article h1").textContent = event.title.rendered;
-
-    document.querySelector(".longdescription").textContent = event.content.rendered;
 }
-*/
+
 function useData(myData) {
     //console.log(myData)
 
