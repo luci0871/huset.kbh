@@ -134,7 +134,7 @@ form {
     grid-gap: 1rem;
     max-width: 1300px;
     grid-template-rows: 2fr;
-    margin: o auto;
+    margin: 0 auto;
     border-radius: 25%;
     padding: 2rem;
     margin-left: 200px;

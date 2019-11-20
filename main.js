@@ -112,6 +112,8 @@ function showEvent(event) {
     const prices = eventCopy.querySelector(".prices");
     prices.innerHTML = event.price;
 
+    const desc = eventCopy.querySelector(".desc");
+    desc.innerHTML = event.description;
 
 
 
